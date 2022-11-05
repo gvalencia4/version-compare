@@ -42,21 +42,21 @@ public class MattVersionCompare {
         System.out.println("First:  " + Arrays.toString(intv1.toArray()));
         System.out.println("Second: " + Arrays.toString(intv2.toArray()));
 
-        int comparedResult = 25; //test to see if logic changes this value
         for (int i = 0; i < intv1.size(); i++){
             if (intv1.get(i) > intv2.get(i) ){
-                comparedResult = 1;
+                return  1;
             } else if (intv1.get(i) < intv2.get(i)) {
-                comparedResult = -1;
-            } else {
-                comparedResult = 0;
+                return -1;
             }
         }
-        return comparedResult;
+        return 0;
     }
 
     public static void main (String[] args){
         System.out.println(versionComparison("1.1.4", "1.1.0.0.1"));
         System.out.println(versionComparison("1", "1.1.0.0.1.0"));
+        System.out.println(versionComparison("1", "1.0.0.0.0.0"));
+        System.out.println(versionComparison("1.0.24", "1.0.24.0.0.0"));
+        System.out.println(versionComparison("0.0.24", "0.0.24.0.0.0"));
     }
 }
