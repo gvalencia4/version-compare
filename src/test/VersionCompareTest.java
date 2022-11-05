@@ -48,4 +48,12 @@ class VersionCompareTest {
 
         assertEquals(VersionCompareStrings(inputString1, inputString2), 0);
     }
+
+    @Test
+    void StringsWithLeadingZerosReturnZero() {
+        String inputString1 = "0.24.45.3.0.0.0";
+        String inputString2 = "0.24.45.3";
+
+        assertEquals(VersionCompareStrings(inputString1, inputString2), 0);
+    }
 }
