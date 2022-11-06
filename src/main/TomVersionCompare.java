@@ -21,6 +21,7 @@ public class TomVersionCompare {
 
         // Now we need to ensure parts1 and parts2 have the same length
 
+        // Note: This does not work when the second string is shorter, and they are not equal
         parts1 = copyAndFill(parts1, parts2.length);
         parts2 = copyAndFill(parts2, parts1.length);
 
@@ -36,8 +37,12 @@ public class TomVersionCompare {
     }
 
     public static void main(String[] args) {
-//        String version1 = "1.3";
-//        String version2 = "1.3.0.0.3";
-//        System.out.println(TomVersionCompareStrings(version1, version2));
+//        String version1 = "5.0.0.1";
+//        String version2 = "5";
+
+        String version1 = "5.0.0.1";
+        String version2 = "5.2";
+
+        System.out.println(TomVersionCompareStrings(version1, version2));
     }
 }
