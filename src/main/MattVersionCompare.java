@@ -6,7 +6,7 @@ import java.util.List;
 
 public class MattVersionCompare {
 
-    public static int versionComparison(String v1, String v2){
+    public static int MattVersionCompareStrings(String v1, String v2){
 
         // split arguments by . into array
         String[] splitv1 = v1.split("\\.");
@@ -53,10 +53,10 @@ public class MattVersionCompare {
     }
 
     public static void main (String[] args){
-        System.out.println(versionComparison("1.1.4", "1.1.0.0.1"));
-        System.out.println(versionComparison("1", "1.1.0.0.1.0"));
-        System.out.println(versionComparison("1", "1.0.0.0.0.0"));
-        System.out.println(versionComparison("1.0.24", "1.0.24.0.0.0"));
-        System.out.println(versionComparison("0.0.24", "0.0.24.0.0.0"));
+        System.out.println(MattVersionCompareStrings("1.1.4", "1.1.0.0.1"));
+        System.out.println(MattVersionCompareStrings("1", "1.1.0.0.1.0"));
+        System.out.println(MattVersionCompareStrings("1", "1.0.0.0.0.0"));
+        System.out.println(MattVersionCompareStrings("1.0.24", "1.0.24.0.0.0"));
+        System.out.println(MattVersionCompareStrings("0.0.24", "0.0.24.0.0.0"));
     }
 }
